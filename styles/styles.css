@@ -1,0 +1,62 @@
+/* Base reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Kumbh Sans', sans-serif;
+  font-size: 18px;
+  background-color: hsl(185, 75%, 39%);
+  background-image: url(/images/bg-pattern-top.svg), url(/images/bg-pattern-bottom.svg);
+  background-position: bottom -10vh right 45vw, top 55vh left 40vw ;
+  background-repeat: no-repeat, no-repeat;
+}
+
+h1 {
+  font-weight: 400;
+}
+
+.wrapper {
+  /* Actual magic for proper centering in both directions */
+  display: grid;
+  place-items: center;
+  /* ***** */
+  height: 98vh;
+  width: 100vw;
+  
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  width: 325px;
+  border-radius: 10px;
+  box-shadow: 3px 5px 9px -5px black;
+}
+
+.top-image {
+  border-radius: 10px 10px 0 0;
+  object-fit: cover;
+}
+
+.profile {
+  text-align: center;
+}
+
+.profile img {
+  position: relative;
+  border-radius: 50%;
+  border: 10px solid white;
+  bottom: 3.5rem;
+}
+
+.stats {
+ display: flex;
+  justify-content: space-evenly;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
