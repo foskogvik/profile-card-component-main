@@ -1,3 +1,8 @@
+html {
+  /*Remember that all text tags share the same base font-size and has a default em that changes its size.*/
+  font-size: 62.5%;
+}
+
 /* Base reset */
 * {
   margin: 0;
@@ -7,15 +12,33 @@
 
 body {
   font-family: 'Kumbh Sans', sans-serif;
-  font-size: 18px;
+  font-size: 1.8rem;
   background-color: hsl(185, 75%, 39%);
   background-image: url(/images/bg-pattern-top.svg), url(/images/bg-pattern-bottom.svg);
-  background-position: bottom -10vh right 45vw, top 55vh left 40vw ;
+  background-position: bottom 35vh right 40vw, top 45vh left 40vw ;
   background-repeat: no-repeat, no-repeat;
 }
 
 h1 {
-  font-weight: 400;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+h3 {
+  text-align: center;
+}
+
+span, p {
+  font-weight: 300;
+}
+
+span {
+  margin-left: 0.5rem;
+  color: hsl(0, 0%, 59%);
+}
+
+p {
+  letter-spacing: 0.2rem;
 }
 
 .wrapper {
@@ -25,20 +48,19 @@ h1 {
   /* ***** */
   height: 98vh;
   width: 100vw;
-  
 }
 
 main {
   display: flex;
   flex-direction: column;
   background-color: white;
-  width: 325px;
-  border-radius: 10px;
+  width: 33rem;
+  border-radius: 1rem;
   box-shadow: 3px 5px 9px -5px black;
 }
 
 .top-image {
-  border-radius: 10px 10px 0 0;
+  border-radius: 1rem 1rem 0 0;
   object-fit: cover;
 }
 
@@ -46,16 +68,45 @@ main {
   text-align: center;
 }
 
+.profile-image {
+  position: relative;
+  height: 7rem;
+}
+
+.anti-bullshit-circle {
+  position: absolute;
+  background-color: white;
+  width: 10.6rem;
+  height: 10.6rem;
+  border-radius: 50%;
+  bottom: 2.4rem;
+  left: 11.2rem;
+}
+
 .profile img {
   position: relative;
   border-radius: 50%;
-  border: 10px solid white;
-  bottom: 3.5rem;
+  object-fit: fill;
+  border: 0.5rem solid white;
+  bottom: 6rem;
+}
+
+.profile p {
+  margin: 2rem;
+  letter-spacing: 0;
 }
 
 .stats {
- display: flex;
+  display: flex;
   justify-content: space-evenly;
+  border-top: 1px solid hsl(0, 0%, 59%);
+  padding-top: 2rem;
+}
+
+.stats p {
+  letter-spacing: 0.2rem;
+  margin: 1rem 0 2rem 0;
+  color: hsl(0, 0%, 59%);
 }
 
 .attribution { font-size: 11px; text-align: center; }
