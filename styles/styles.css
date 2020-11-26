@@ -73,7 +73,9 @@ main {
   height: 7rem;
 }
 
-.anti-bullshit-circle {
+/* New anti bullshit circle, fixes border gap */
+.profile-image::before {
+  content: "";
   position: absolute;
   background-color: white;
   width: 10.6rem;
