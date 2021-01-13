@@ -1,115 +1,122 @@
-html {
-  /*Remember that all text tags share the same base font-size and has a default em that changes its size.*/
-  font-size: 62.5%;
+/* Base reset */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
 }
 
-/* Base reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+html {
+	/* All rems are now 10px */
+	font-size: 62.5%;
 }
+
+/* General Styles */
 
 body {
-  font-family: 'Kumbh Sans', sans-serif;
-  font-size: 1.8rem;
-  background-color: hsl(185, 75%, 39%);
-  background-image: url(/images/bg-pattern-top.svg), url(/images/bg-pattern-bottom.svg);
-  background-position: bottom 35vh right 40vw, top 45vh left 40vw ;
-  background-repeat: no-repeat, no-repeat;
-}
-
-h1 {
-  font-size: 1.8rem;
-  font-weight: 700;
-}
-
-h3 {
-  text-align: center;
-}
-
-span, p {
-  font-weight: 300;
-}
-
-span {
-  margin-left: 0.5rem;
-  color: hsl(0, 0%, 59%);
-}
-
-p {
-  letter-spacing: 0.2rem;
+	background-color: hsl(185, 75%, 39%);
+	background-image: url(/images/bg-pattern-top.svg),
+		url(/images/bg-pattern-bottom.svg);
+	background-position: bottom 35vh right 40vw, top 45vh left 40vw;
+	background-repeat: no-repeat, no-repeat;
+	font-family: 'Kumbh Sans', sans-serif;
+	font-size: 1.8rem;
+	line-height: 1.6;
 }
 
 .wrapper {
-  /* Actual magic for proper centering in both directions */
-  display: grid;
-  place-items: center;
-  /* ***** */
-  height: 98vh;
-  width: 100vw;
+	/* Actual magic for proper centering in both directions */
+	display: grid;
+	min-height: 100vh;
+	min-width: 100vw;
+	place-items: center;
 }
 
-main {
-  display: flex;
-  flex-direction: column;
-  background-color: white;
-  width: 33rem;
-  border-radius: 1rem;
-  box-shadow: 3px 5px 9px -5px black;
+/* Typography */
+
+.bold-txt {
+	font-size: 2rem;
+	font-weight: 700;
 }
 
-.top-image {
-  border-radius: 1rem 1rem 0 0;
-  object-fit: cover;
+.sm-txt {
+	color: hsl(0, 0%, 59%);
+	font-size: 1.4rem;
+	letter-spacing: 0.1rem;
 }
+
+.md-txt {
+	color: hsl(0, 0%, 36%);
+	font-weight: 300;
+}
+
+/* Card Component */
+
+.card {
+	background-color: white;
+	border-radius: 1rem;
+	box-shadow: 3px 5px 9px -5px black;
+	display: flex;
+	flex-direction: column;
+	width: 33rem;
+}
+
+.card__bg {
+	border-radius: 1rem 1rem 0 0;
+}
+
+/* Profile section */
 
 .profile {
-  text-align: center;
+	margin: 2rem;
+	text-align: center;
+	line-height: 1.8;
 }
 
-.profile-image {
-  position: relative;
-  height: 7rem;
+.image-container {
+	height: 6rem;
+	position: relative;
 }
 
-/* New anti bullshit circle, fixes border gap */
-.profile-image::before {
-  content: "";
-  position: absolute;
-  background-color: white;
-  width: 10.6rem;
-  height: 10.6rem;
-  border-radius: 50%;
-  bottom: 2.4rem;
-  left: 11.2rem;
+/* circle for patching border gap. fixes border gap */
+.image-container::before {
+	background-color: white;
+	border-radius: 50%;
+	bottom: 2.4rem;
+	content: '';
+	height: 9.5rem;
+	left: 9.2rem;
+	position: absolute;
+	width: 10.6rem;
 }
 
-.profile img {
-  position: relative;
-  border-radius: 50%;
-  object-fit: fill;
-  border: 0.5rem solid white;
-  bottom: 6rem;
+.profile__image {
+	border: 0.5rem solid white;
+	border-radius: 50%;
+	bottom: 6rem;
+	height: 10.5rem;
+	position: relative;
+	width: 10.5rem;
 }
 
-.profile p {
-  margin: 2rem;
-  letter-spacing: 0;
-}
+/* stats section */
 
 .stats {
-  display: flex;
-  justify-content: space-evenly;
-  border-top: 1px solid hsl(0, 0%, 59%);
-  padding-top: 2rem;
+	border-top: 1px solid hsl(0, 1%, 74%);
+	display: flex;
+	justify-content: space-evenly;
+	line-height: 1.4;
+	padding: 2.5rem 0;
+	text-align: center;
 }
 
-.stats p {
-  letter-spacing: 0.2rem;
-  margin: 1rem 0 2rem 0;
-  color: hsl(0, 0%, 59%);
-}
+/* challenge attribution */
 
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution {
+	font-size: 11px;
+	text-align: center;
+}
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
